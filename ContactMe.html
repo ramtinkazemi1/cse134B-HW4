@@ -3,6 +3,7 @@
 <head>
     <meta charset = "UTF-8";
     <title>Contact Me</title>
+    <hr>
 </head>
 <body>
     <section>
@@ -26,7 +27,13 @@
                     <label for="fname">Full name:</label>
                     <input type="text" placeholder="Your name here..."><br><br>
                     <label for="subject">Subject:</label>
-                    <input type="text" placeholder="Your Subject"><br><br>
+                    <input list="subjects" placeholder="Your Subject"><br><br>
+                    <datalist id="subjects">
+                        <option value="Job Opportunity">
+                        <option value="Question">
+                        <option value="Collaboration">
+                        <option value="Feedback">
+                    </datalist>
                     <label for="phone">Number:</label>
                     <input type="tel" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
                     <textarea rows = "15" cols = "75">
