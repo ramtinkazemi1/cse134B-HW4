@@ -1,73 +1,185 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset = "UTF-8"
+ <head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramtin Kazemi</title>
-    
-</head>
+ </head>
 <!--  link, template,-->
+
+<style>
+    header{
+        background-color: rgba(137, 43, 226, 0.782);
+        border: 2px solid #000;
+        height: 55px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #h3{
+        color: rgb(0, 0, 0);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        line-height: 20px;
+        width: fit-content;
+    }
+    #navBar{
+        background-color: rgba(137, 43, 226, 0.782);
+        color: rgb(0, 0, 0);
+        width: fit-content;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border: 1px solid black;
+        list-style-type: none;
+        text-align: left;
+        display: block;
+        line-height: 15px;
+        padding: 10px;
+        padding-right: 120px;
+        margin-right: 10px;
+        position: absolute;
+        right: 10px;
+        top: 120px;
+    }
+    #navOpt a {
+        display: block;
+        border-bottom: 1px solid black;
+        font-size: larger;
+        color: #000;
+        padding: 8px 0px;
+        text-decoration-line: none;
+      }
+
+      #navOpt a.active {
+        background-color: #04AA6D;
+        color: white;
+      }
+
+      #navOpt a:hover:not(.active) {
+        background-color: rgba(236, 201, 238, 0.804);
+        color: solid black;
+        font-weight: bolder;
+    }
+
+    #infoBox{
+        box-sizing: border-box;
+        display: grid;
+        border-style: solid;
+        border-width: 1px;
+        border-color: blueviolet;
+        background-color: transparent;
+        font-family: fantasy;
+        padding: 3px;
+        font-size: 15px;
+        width: 250px;
+        position: absolute;
+        left: 10px;
+        top: 130px;
+    }
+
+    .meter {
+        height: 2px;
+        position: relative;
+        background: rgba(96, 96, 96, 0.258);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding-bottom: 7px;
+        padding-top: 3px;
+        width: 15%;
+    }
+    .meter > span {
+        display: block;
+        height: fit-content;
+        height: 270%;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: blueviolet;
+        position: relative;
+        overflow: hidden;
+      }
+
+</style>
 <body>
     <header>
-
-    </header>
+        <center><h3 id="h3"><b>RAMTIN KAZEMI</b></h3></center>
+    </header><br><br>
 
     <main>
         <center>
-            <picture>
-                <img src="Media/ax.png" alt="ramtin" width="250" height="250">
+            <picture id="ramtinsPic">
+                <img src="Media/ax.png" alt="ramtin kazemi" width="250" height="250">
             </picture>
         </center>
+
+        <section>
+            <ul id="navBar">
+                <li id="navOpt"><a href="Biography.html">Biography</a>&nbsp;</li>
+                <li id="navOpt"><a href="Experiences.html">Projects</a>&nbsp;</li>
+                <li id="navOpt"><a href="Photographs.html">Photographs</a>&nbsp;</li>
+                <li id="navOpt"><a href="ContactMe.html">Contact Me</a></li>
+                </ul>
+        </section>
+
         <aside>
-            <h3>info box</h3>
-            <ul>
-                <li>Age: 24</li>
-                <li>Work: Software Engineer</li>
-                <li>Status: Single</li>
-                <li>Location: San Diego, CA</li>
-                <li>Character: Self-Reliant</li>
-            </ul>
+            <div id="infoBox">
+                <ul>
+                    <li>Age: <b>24</b></li>
+                    <li>Job: <b>Software Engineer</b></li>
+                    <li>Status: <b>Single</b></li>
+                    <li>Location: <b>San Diego, CA</b></li>
+                    <li>Character: <b>Self-Reliant</b></li>
+                </ul>
+            </div>
 
         </aside>
 
-        <section>
-            <h3><i>Skills</i></h3>
-            <ul>
-                <li>Java</li>
-                <li>C++</li>
-                <li>Python</li>
-                <li>Unix</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3><strong>Motivations</strong></h3>
-            <ul>
-                <li>Promotion</li>
-                <li>User needs</li>
-                <li>Growth</li>
-                <li>Power</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>Other Pages</h3>
-            <nav>
-                <a href="Biography.html">Biography</a> |
-                <a href="Experiences.html">Experiences and Projects</a> |
-                <a href="Photographs.html">Photographs</a> |
-                <a href="ContactMe.html">Contact Me</a>
-                </nav>
-        </section>
         <br />
         <br />
 
+        <caption><b>Skills</b></caption>
+        <div id="skillDiv">
+            <caption>JAVA</caption><br>
+            <div class="meter">
+                <span style="width: 88%"></span><br></div><br>
+            <caption>PYTHON</caption>
+            <div class="meter">
 
-    </main>
+                <span style="width: 75%"></span><br></div><br>
+            <caption>C++</caption>
+            <div class="meter">
+
+                <span style="width: 60%"></span><br></div><br>
+            <caption>C</caption>
+            <div class="meter">
+
+                <span style="width: 50%"></span><br></div>
+        </div><br>
+
+        <caption><b>Concerns</b></caption>
+        <div id="concernDiv">
+            <caption>Getting an Internship</caption>
+            <div class="meter">
+                <span style="width: 88%"></span><br></div><br>
+            <caption>Fulfilling the degree audit</caption>
+            <div class="meter">
+
+                <span style="width: 75%"></span><br></div><br>
+            <caption>Referrals</caption>
+            <div class="meter">
+
+                <span style="width: 60%"></span><br></div><br>
+            <caption>Summer Fun</caption>
+            <div class="meter">
+
+                <span style="width: 50%"></span><br></div>
+        </div>
+
+    </main><br><br><br><br><br><br><br><br>
 
 
 
     <footer>
-        <center>Author: Ramtin Kazemi<br></center><p>
+        <center>Author: Ramtin Kazemi</center>
         <center><a href="mailto:ramkazemi@yahoo.com">Send an Email to Ramtin</a></center>
       </footer>
 </body>
