@@ -8,6 +8,10 @@
 <!--  link, template,-->
 
 <style>
+    body{
+        background-color: rgba(255, 166, 0, 0.234);
+    }
+
     header{
         background-color: rgba(137, 43, 226, 0.782);
         border: 2px solid #000;
@@ -22,10 +26,15 @@
         line-height: 20px;
         width: fit-content;
     }
+    ramtinPic{
+        justify-content: center;
+        left: 45%;
+        height: auto;
+    }
     #navBar{
         background-color: rgba(137, 43, 226, 0.782);
-        color: rgb(0, 0, 0);
-        width: fit-content;
+        width: max-content;
+        height: max-content;
         font-family: Georgia, 'Times New Roman', Times, serif;
         border: 1px solid black;
         list-style-type: none;
@@ -33,10 +42,12 @@
         display: block;
         line-height: 15px;
         padding: 10px;
+        width: 10%;
         padding-right: 120px;
         margin-right: 10px;
         position: absolute;
         right: 10px;
+        left: 77.5%;
         top: 120px;
     }
     #navOpt a {
@@ -46,11 +57,6 @@
         color: #000;
         padding: 8px 0px;
         text-decoration-line: none;
-      }
-
-      #navOpt a.active {
-        background-color: #04AA6D;
-        color: white;
       }
 
       #navOpt a:hover:not(.active) {
@@ -67,12 +73,33 @@
         border-color: blueviolet;
         background-color: transparent;
         font-family: fantasy;
+        width: fit-content;
         padding: 3px;
         font-size: 15px;
-        width: 250px;
+        width: 25%;
         position: absolute;
         left: 10px;
         top: 130px;
+    }
+
+    #edParagraph{
+        box-sizing: border-box;
+        display: grid;
+        border-style: solid;
+        border-width: 1px;
+        border-color: blueviolet;
+        background-color: transparent;
+        font-family: fantasy;
+        width: fit-content;
+        height: max-content;
+        padding: 3px;
+        font-size: 15px;
+        width: 40%;
+        margin: 0 , auto;
+        position: absolute;
+        /*top: 370px;*/
+        top: 50%;
+        left: 30%;
     }
 
     .meter {
@@ -83,7 +110,7 @@
         border-bottom-left-radius: 0;
         padding-bottom: 7px;
         padding-top: 3px;
-        width: 15%;
+        width: 95%;
     }
     .meter > span {
         display: block;
@@ -98,7 +125,45 @@
         overflow: hidden;
       }
 
+      #skillDiv{
+        box-sizing: border-box;
+        display: grid;
+        border-style: solid;
+        border-width: 1px;
+        border-color: blueviolet;
+        background-color: transparent;
+        font-family: fantasy;
+        width: fit-content;
+        padding: 3px;
+        font-size: 15px;
+        width: 25%;
+        position: absolute;
+        left: 10px;
+        top: 550px;
+      }
+      #concernDiv{
+        box-sizing: border-box;
+        display: grid;
+        border-style: solid;
+        border-width: 1px;
+        border-color: blueviolet;
+        background-color: transparent;
+        font-family: fantasy;
+        width: fit-content;
+        padding: 3px;
+        font-size: 15px;
+        width: 25%;
+        position: absolute;
+        right: 10px;
+        top: 550px;
+      }
+      #footer{
+        position:relative;
+        bottom:0;
+        justify-content: center;
+      }
 </style>
+
 <body>
     <header>
         <center><h3 id="h3"><b>RAMTIN KAZEMI</b></h3></center>
@@ -106,9 +171,7 @@
 
     <main>
         <center>
-            <picture id="ramtinsPic">
-                <img src="Media/ax.png" alt="ramtin kazemi" width="250" height="250">
-            </picture>
+            <img id="ramtinPic" src="Media/ax.png" alt="ramtin kazemi" width="250" height="250">
         </center>
 
         <section>
@@ -136,8 +199,23 @@
         <br />
         <br />
 
-        <caption><b>Skills</b></caption>
+
+        <div id="edParagraph">
+            <center><h3>Education</h3></center>
+            <em>University of California San Diego</em><br>La Jolla, CA<br>
+                Bachelor of Science in Computer Science<br><hr>
+                <b>Expected graduation:</b> June 2023<br><hr>
+                <b>Coursework:</b> CSE110(Software Engineering),
+                 CSE100(Advanced data structures in C++),
+                 CSE101(Design & Analysis of Algorithm),
+                 COGS108(Data Science in practice using Python),
+                 CSE12(Data structures in Java), CSE30(Software tools in C, Assembly, Linux)
+                </p>
+        </div>
+
         <div id="skillDiv">
+            <center><caption><b>Skills</b></caption></center><br>
+            <hr color="white">
             <caption>JAVA</caption><br>
             <div class="meter">
                 <span style="width: 88%"></span><br></div><br>
@@ -155,15 +233,17 @@
                 <span style="width: 50%"></span><br></div>
         </div><br>
 
-        <caption><b>Concerns</b></caption>
         <div id="concernDiv">
+            <center><caption><b>Concerns</b></caption></center><br>
+            <hr color="white">
             <caption>Getting an Internship</caption>
             <div class="meter">
-                <span style="width: 88%"></span><br></div><br>
+
+                <span style="width: 97%"></span><br></div><br>
             <caption>Fulfilling the degree audit</caption>
             <div class="meter">
 
-                <span style="width: 75%"></span><br></div><br>
+                <span style="width: 40%"></span><br></div><br>
             <caption>Referrals</caption>
             <div class="meter">
 
@@ -171,16 +251,14 @@
             <caption>Summer Fun</caption>
             <div class="meter">
 
-                <span style="width: 50%"></span><br></div>
+                <span style="width: 90%"></span><br></div>
         </div>
 
-    </main><br><br><br><br><br><br><br><br>
+    </main><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-
-
-    <footer>
-        <center>Author: Ramtin Kazemi</center>
-        <center><a href="mailto:ramkazemi@yahoo.com">Send an Email to Ramtin</a></center>
+    <footer id="footer">
+        <center>Author: Ramtin Kazemi<br>
+        <a href="mailto:ramkazemi@yahoo.com">Send an Email to Ramtin</a></center>
       </footer>
 </body>
 
