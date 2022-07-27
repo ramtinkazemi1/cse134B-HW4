@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
     <meta charset = "UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>person</title>
 
     <style>
@@ -10,6 +10,11 @@
         @media (max-width: 800px) {
             .navBar{
             flex-direction: column;}
+        }
+
+        @media (max-height: 70px) {
+            .navBar{
+            flex-direction: row;}
         }
 
         body{
@@ -62,16 +67,16 @@
             padding: 8px 0px;
             text-decoration-line: none;
           }
-    
+
           #navOpt a:hover:not(.active) {
             background-color: rgba(236, 201, 238, 0.804);
             color: solid black;
             font-weight: bolder;
         }
-    
+
         #infoBox{
             box-sizing: border-box;
-            display: flex;
+            display: grid;
             border-style: solid;
             border-width: 1px;
             border-color: blueviolet;
@@ -85,7 +90,7 @@
             left: 10px;
             top: 130px;
         }
-    
+
         #edParagraph{
             box-sizing: border-box;
             display: grid;
@@ -105,7 +110,7 @@
             top: 50%;
             left: 30%;
         }
-    
+
         .meter {
             height: 2px;
             position: relative;
@@ -128,7 +133,7 @@
             position: relative;
             overflow: hidden;
           }
-    
+
           #skillDiv{
             box-sizing: border-box;
             display: grid;
