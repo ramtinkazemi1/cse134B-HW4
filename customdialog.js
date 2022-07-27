@@ -73,7 +73,7 @@ export function alertOn(){
      let prompt_val;
      button_ON();
      document.getElementById("promptDialog").close();
-     prompt_val = document.getElementById("pmt").value;
+     prompt_val = document.getElementById("promptInput").value;
 
      if(prompt_val != null && prompt_val != ""){
 
@@ -117,7 +117,7 @@ export function alertOn(){
      let safe_val = DOMPurify.sanitize(val);
      if(safe_val != null && safe_val != ""){
 
-         document.getElementById("output3").innerHTML = `Prompt result: ${safe_val}`;
+         document.getElementById("output3").innerHTML = `Safer Prompt result: ${safe_val}`;
      }
 
      else {
