@@ -141,4 +141,4 @@ export function alertOn(){
      document.getElementById("output1").style.display = "none";
  }
 
- document.getElementById("safeBut1").addEventListener("click", safe_closeByCancel);
+ document.getElementById("saferPromptCancelBtn").addEventListener("click", safe_closeByCancel);
