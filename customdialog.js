@@ -1,83 +1,83 @@
-export function alertOn(){
-    button_OFF();
+export function whenOn(){
+    btn_off();
      document.getElementById("alertDialog").show();
  }
 
- document.getElementById("alertBtn").addEventListener("click", alertOn);
+ document.getElementById("alertBtn").addEventListener("click", whenOn);
 
- export function alertOff(){
-     button_ON() ;
+ export function whenOff(){
+     btn_on() ;
      document.getElementById("alertDialog").close();
  }
 
- document.getElementById("button1").addEventListener("click", alertOff);
+ document.getElementById("button1").addEventListener("click", whenOff);
 
 
-  export function button_ON(){
+  export function btn_on(){
      document.getElementById("alertBtn").disabled = false;
      document.getElementById("confirmBtn").disabled = false;
      document.getElementById("promptBtn").disabled = false;
      document.getElementById("saferPromptBtn").disabled = false;
  }
 
- export function button_OFF(){
+ export function btn_off(){
      document.getElementById("alertBtn").disabled = true;
      document.getElementById("confirmBtn").disabled = true;
      document.getElementById("promptBtn").disabled = true;
      document.getElementById("saferPromptBtn").disabled = true;
  }
 
- export function confirmOn(){
-     button_OFF();
+ export function conf_on(){
+     btn_off();
      document.getElementById("confirmDialog").show();
  }
 
- document.getElementById("confirmBtn").addEventListener("click",confirmOn);
+ document.getElementById("confirmBtn").addEventListener("click",conf_on);
 
 
- export function true_conformOff(){
-     let confirm_state;
-     button_ON();
-     confirm_state = true;
+ export function trueWhenConfOff(){
+     let confirmBool;
+     btn_on();
+     confirmBool = true;
      document.getElementById("confirmDialog").close();
-     document.getElementById("output1").innerHTML = `Confirm result: ${confirm_state}`;
+     document.getElementById("output1").innerHTML = `Confirm result: ${confirmBool}`;
      document.getElementById("output1").style.display = "initial";
      document.getElementById("output2").style.display = "none";
      document.getElementById("output3").style.display = "none";
  }
 
- document.getElementById("confirmOKBtn").addEventListener("click", true_conformOff);
+ document.getElementById("confirmOKBtn").addEventListener("click", trueWhenConfOff);
 
- export function false_conformOff(){
-     let confirm_state;
-     button_ON();
-     confirm_state = false;
+ export function falseWhenConfOff(){
+     let confirmBool;
+     btn_on();
+     confirmBool = false;
      document.getElementById("confirmDialog").close();
-     document.getElementById("output1").innerHTML = `Confirm result: ${confirm_state}`;
+     document.getElementById("output1").innerHTML = `Confirm result: ${confirmBool}`;
      document.getElementById("output1").style.display = "initial";
      document.getElementById("output2").style.display = "none";
      document.getElementById("output3").style.display = "none";
  }
 
- document.getElementById("confirmCancelBtn").addEventListener("click", false_conformOff);
+ document.getElementById("confirmCancelBtn").addEventListener("click", falseWhenConfOff);
 
- export function prompt_open(){
-     button_OFF();
+ export function promptClicked(){
+     btn_off();
      document.getElementById("promptDialog").show();
  }
 
- document.getElementById("promptBtn").addEventListener("click", prompt_open);
+ document.getElementById("promptBtn").addEventListener("click", promptClicked);
 
 
- export function prompt_closeByOk(){
-     let prompt_val;
-     button_ON();
+ export function promptCloseWithOK(){
+     let promptValue;
+     btn_on();
      document.getElementById("promptDialog").close();
-     prompt_val = document.getElementById("promptInput").value;
+     promptValue = document.getElementById("promptInput").value;
 
-     if(prompt_val != null && prompt_val != ""){
+     if(promptValue != null && promptValue != ""){
 
-         document.getElementById("output2").innerHTML = `Prompt result: ${prompt_val}`;
+         document.getElementById("output2").innerHTML = `Prompt result: ${promptValue}`;
      }
 
      else {
@@ -89,10 +89,10 @@ export function alertOn(){
      document.getElementById("output3").style.display = "none";
  }
 
- document.getElementById("promptOKBtn").addEventListener("click", prompt_closeByOk);
+ document.getElementById("promptOKBtn").addEventListener("click", promptCloseWithOK);
 
  export function prompt_closeByCancel(){
-     button_ON();
+     btn_on();
      document.getElementById("promptDialog").close();
      document.getElementById("output2").innerHTML = "User didn't enter anything";
      document.getElementById("output2").style.display = "initial";
@@ -102,38 +102,35 @@ export function alertOn(){
 
  document.getElementById("promptCancelBtn").addEventListener("click", prompt_closeByCancel);
 
- export function safe_open(){
-     button_OFF();
+ export function saferPromptClicked(){
+     btn_off();
      document.getElementById("saferPromptDialog").show();
  }
 
- document.getElementById("saferPromptBtn").addEventListener("click", safe_open);
+ document.getElementById("saferPromptBtn").addEventListener("click", saferPromptClicked);
 
- export function safe_closeByOk(){
-     let val;
-     button_ON();
+ export function saferPromptWhenOKclicked(){
+     let SPval;
+     btn_on();
      document.getElementById("saferPromptDialog").close();
-     val = document.getElementById("saferPromptInput").value;
-     let safe_val = DOMPurify.sanitize(val);
-     if(safe_val != null && safe_val != ""){
+     SPval = document.getElementById("saferPromptInput").value;
+     let saferPromptValue = DOMPurify.sanitize(SPval);
+     if(saferPromptValue != null && saferPromptValue != ""){
 
-         document.getElementById("output3").innerHTML = `Safer Prompt result: ${safe_val}`;
+         document.getElementById("output3").innerHTML = `Safer Prompt result: ${saferPromptValue}`;
      }
-
      else {
-
          document.getElementById("output3").innerHTML = "User didn't enter anything";
      }
-
      document.getElementById("output3").style.display = "initial";
      document.getElementById("output2").style.display = "none";
      document.getElementById("output1").style.display = "none";
  }
 
- document.getElementById("saferPromptOKBtn").addEventListener("click", safe_closeByOk);
+ document.getElementById("saferPromptOKBtn").addEventListener("click", saferPromptWhenOKclicked);
 
- export function safe_closeByCancel(){
-     button_ON();
+ export function saferPromptWhenCancelClicked(){
+     btn_on();
      document.getElementById("saferPromptDialog").close();
      document.getElementById("output3").innerHTML = "User didn't enter anything";
      document.getElementById("output3").style.display = "initial";
@@ -141,4 +138,4 @@ export function alertOn(){
      document.getElementById("output1").style.display = "none";
  }
 
- document.getElementById("saferPromptCancelBtn").addEventListener("click", safe_closeByCancel);
+ document.getElementById("saferPromptCancelBtn").addEventListener("click", saferPromptWhenCancelClicked);
