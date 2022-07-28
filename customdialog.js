@@ -27,14 +27,15 @@ export function whenOn(){
      document.getElementById("saferPromptBtn").disabled = true;
  }
 
- export function conf_on(){
+ export function whenConfClicked(){
      btn_off();
      document.getElementById("confirmDialog").show();
  }
 
- document.getElementById("confirmBtn").addEventListener("click",conf_on);
 
 
+
+ document.getElementById("confirmBtn").addEventListener("click",whenConfClicked);
  export function trueWhenConfOff(){
      let confirmBool;
      btn_on();
@@ -46,8 +47,9 @@ export function whenOn(){
      document.getElementById("output3").style.display = "none";
  }
 
- document.getElementById("confirmOKBtn").addEventListener("click", trueWhenConfOff);
 
+
+ document.getElementById("confirmOKBtn").addEventListener("click", trueWhenConfOff);
  export function falseWhenConfOff(){
      let confirmBool;
      btn_on();
@@ -59,29 +61,26 @@ export function whenOn(){
      document.getElementById("output3").style.display = "none";
  }
 
- document.getElementById("confirmCancelBtn").addEventListener("click", falseWhenConfOff);
 
+
+
+ document.getElementById("confirmCancelBtn").addEventListener("click", falseWhenConfOff);
  export function promptClicked(){
      btn_off();
      document.getElementById("promptDialog").show();
  }
 
+
+
+
  document.getElementById("promptBtn").addEventListener("click", promptClicked);
-
-
  export function promptCloseWithOK(){
      let promptValue;
      btn_on();
      document.getElementById("promptDialog").close();
      promptValue = document.getElementById("promptInput").value;
-
-     if(promptValue != null && promptValue != ""){
-
-         document.getElementById("output2").innerHTML = `Prompt result: ${promptValue}`;
-     }
-
+     if(promptValue != null && promptValue != ""){    document.getElementById("output2").innerHTML = `Prompt result: ${promptValue}`;}
      else {
-
          document.getElementById("output2").innerHTML = "User didn't enter anything";
      }
      document.getElementById("output2").style.display = "initial";
@@ -89,8 +88,10 @@ export function whenOn(){
      document.getElementById("output3").style.display = "none";
  }
 
- document.getElementById("promptOKBtn").addEventListener("click", promptCloseWithOK);
 
+
+
+ document.getElementById("promptOKBtn").addEventListener("click", promptCloseWithOK);
  export function prompt_closeByCancel(){
      btn_on();
      document.getElementById("promptDialog").close();
@@ -100,15 +101,18 @@ export function whenOn(){
      document.getElementById("output3").style.display = "none";
  }
 
- document.getElementById("promptCancelBtn").addEventListener("click", prompt_closeByCancel);
 
+
+
+ document.getElementById("promptCancelBtn").addEventListener("click", prompt_closeByCancel);
  export function saferPromptClicked(){
      btn_off();
      document.getElementById("saferPromptDialog").show();
  }
 
- document.getElementById("saferPromptBtn").addEventListener("click", saferPromptClicked);
 
+
+ document.getElementById("saferPromptBtn").addEventListener("click", saferPromptClicked);
  export function saferPromptWhenOKclicked(){
      let SPval;
      btn_on();
@@ -127,8 +131,9 @@ export function whenOn(){
      document.getElementById("output1").style.display = "none";
  }
 
- document.getElementById("saferPromptOKBtn").addEventListener("click", saferPromptWhenOKclicked);
 
+
+ document.getElementById("saferPromptOKBtn").addEventListener("click", saferPromptWhenOKclicked);
  export function saferPromptWhenCancelClicked(){
      btn_on();
      document.getElementById("saferPromptDialog").close();
